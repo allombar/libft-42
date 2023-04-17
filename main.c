@@ -6,15 +6,16 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:22:29 by alelomba          #+#    #+#             */
-/*   Updated: 2023/04/12 17:36:25 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:06:52 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libft.h"
+#include "includes/libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+/*
 char *strnstr(const char *haystack, const char *needle, size_t len)
 {
     size_t needle_len = strlen(needle);
@@ -58,6 +59,7 @@ void del_function(void *content)
 {
 	free(content); // Par exemple, on suppose que le contenu est alloué dynamiquement
 }
+*/
 #include "limits.h"
 int	main(int ac, char **av)
 {
@@ -145,5 +147,8 @@ int	main(int ac, char **av)
     //    tmp = tmp->next;
     //}
     //printf("Ma value: %d\n", value);
+    ft_isalnum('a');
+    printf("test: %li\n", __SIZE_MAX__ * __SIZE_MAX__);
+    printf("%s\n", (char *)ft_calloc(10, 10));
 	return (0);
 }

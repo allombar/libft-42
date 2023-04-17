@@ -6,13 +6,13 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 12:41:55 by alelomba          #+#    #+#             */
-/*   Updated: 2023/03/19 10:02:35 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/04/14 11:50:12 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	dst_len;

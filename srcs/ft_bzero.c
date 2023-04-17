@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 21:46:57 by alelomba          #+#    #+#             */
-/*   Updated: 2023/03/17 22:42:54 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:03:30 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
-	char	*tmp;
 
 	i = 0;
-	tmp = (char *)s;
 	while (i < n)
 	{
-		tmp[i] = '\0';
+		((char *)s)[i] = '\0';
 		i++;
 	}
 }

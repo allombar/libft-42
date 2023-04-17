@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 09:22:11 by alelomba          #+#    #+#             */
-/*   Updated: 2023/03/19 12:26:03 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/04/14 11:49:06 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (s[i] == c)
 			return ((char *)(&(s[i])));
+		i++;
 	}
 	if (!c)
 		return ((char *)(&(s[i])));
