@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 14:15:27 by alelomba          #+#    #+#             */
-/*   Updated: 2023/04/09 13:44:28 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/04/18 16:28:46 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long nb = (long)n;
+	long	nb;
+
+	nb = (long)n;
 	if (nb < 0)
 	{
 		nb = -nb;

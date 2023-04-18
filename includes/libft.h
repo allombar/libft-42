@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 10:07:34 by alelomba          #+#    #+#             */
-/*   Updated: 2023/04/14 16:25:41 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/04/18 15:20:53 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);

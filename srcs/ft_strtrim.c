@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 15:02:02 by alelomba          #+#    #+#             */
-/*   Updated: 2023/04/12 17:34:13 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/04/18 15:37:49 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ static int	ft_ischarset(char const *set, char c)
 	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int start;
-	int end;
-	int i;
-	char *trimmed;
-	
+	int		start;
+	int		end;
+	int		i;
+	char	*trimmed;
+
 	if (!s1 || !set)
 		return (0);
 	start = 0;

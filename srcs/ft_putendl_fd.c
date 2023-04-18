@@ -6,17 +6,17 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 14:38:42 by alelomba          #+#    #+#             */
-/*   Updated: 2023/04/08 14:43:13 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/04/18 16:26:15 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (s)
 	{
 		write(fd, s, ft_strlen(s));
-		ft_putchar_fd('\0', fd);
+		ft_putchar_fd('\n', fd);
 	}
 }

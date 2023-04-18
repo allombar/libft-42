@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 13:17:37 by alelomba          #+#    #+#             */
-/*   Updated: 2023/04/08 14:02:49 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/04/18 15:38:05 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*strnew;
-	
+
 	if (!s || !f)
 		return (NULL);
 	strnew = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
