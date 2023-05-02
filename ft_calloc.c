@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/06 11:56:13 by alelomba          #+#    #+#             */
+/*   Created: 2023/03/18 17:09:32 by alelomba          #+#    #+#             */
 /*   Updated: 2023/05/02 13:02:53 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	i;
-	size_t	needle_len;
+	void	*tab;
 
-	needle_len = ft_strlen(needle);
-	if (needle_len == 0)
-		return ((char *)haystack);
-	i = 0;
-	while (len >= needle_len)
-	{
-		if (!(ft_memcmp(&haystack[i], needle, needle_len)))
-			return ((char *)(&(haystack[i])));
-		i++;
-		len--;
-	}
-	return (0);
+	if (size != 0 && count != (count * size) / size)
+		return (NULL);
+	tab = malloc(count * size);
+	if (!tab)
+		return (0);
+	ft_bzero(tab, count * size);
+	return (tab);
 }

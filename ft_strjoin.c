@@ -1,11 +1,11 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/18 12:41:55 by alelomba          #+#    #+#             */
+/*   Created: 2023/03/19 09:45:21 by alelomba          #+#    #+#             */
 /*   Updated: 2023/05/02 13:02:53 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -16,32 +16,50 @@ static size_t	ft_slen(const char *s)
 {
 	size_t	i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	while (s[i] != '\0')
 		i++;
 	return (i);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+static void	ft_strcat(char *tab, const char *str)
 {
-	size_t	i;
-	size_t	dst_len;
+	int	start;
+	int	j;
 
-	if (!dst || !src || size == 0)
-		return (size);
-	dst_len = ft_slen(dst);
-	if (size == 0)
-		return (ft_slen(src));
-	if ((int)size < 0)
-		size = dst_len + ft_slen(src) + 1;
-	i = 0;
-	while (dst_len + i < size - 1 && src[i])
+	start = ft_slen(tab);
+	j = 0;
+	while (str[j])
 	{
-		dst[dst_len + i] = src[i];
-		i++;
+		tab[start + j] = str[j];
+		j++;
 	}
-	dst[dst_len + i] = '\0';
-	if (size > dst_len)
-		size = dst_len;
-	return (size + ft_slen(src));
+	tab[start + j] = '\0';
+}
+
+static char	*ft_strnew(int size)
+{
+	char	*result;
+
+	result = (char *)malloc(sizeof(char) * size + 1);
+	if (!result)
+		return (NULL);
+	ft_bzero(result, size + 1);
+	return (result);
+}
+
+char	*ft_strjoin(char const *s1, const char *s2)
+{
+	char	*result;
+
+	result = ft_strnew((ft_slen(s1) + ft_slen(s2)));
+	if (!result)
+		return (NULL);
+	if (s1)
+		ft_strcat(result, s1);
+	if (s2)
+		ft_strcat(result, s2);
+	return (result);
 }

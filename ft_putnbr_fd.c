@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/06 11:56:13 by alelomba          #+#    #+#             */
+/*   Created: 2023/04/08 14:15:27 by alelomba          #+#    #+#             */
 /*   Updated: 2023/05/02 13:02:53 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	size_t	needle_len;
+	long	nb;
 
-	needle_len = ft_strlen(needle);
-	if (needle_len == 0)
-		return ((char *)haystack);
-	i = 0;
-	while (len >= needle_len)
+	nb = (long)n;
+	if (nb < 0)
 	{
-		if (!(ft_memcmp(&haystack[i], needle, needle_len)))
-			return ((char *)(&(haystack[i])));
-		i++;
-		len--;
+		nb = -nb;
+		ft_putchar_fd('-', fd);
 	}
-	return (0);
+	if (nb > 9)
+		ft_putnbr_fd(nb / 10, fd);
+	write(fd, &"0123456789"[nb % 10], 1);
 }
