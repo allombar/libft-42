@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 12:41:55 by alelomba          #+#    #+#             */
-/*   Updated: 2023/05/02 13:02:53 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/05/02 13:24:27 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	dst_len;
 
-	if (!dst || !src || size == 0)
+	if (!dst && size == 0)
 		return (size);
 	dst_len = ft_slen(dst);
 	if (size == 0)

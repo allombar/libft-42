@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:28:55 by alelomba          #+#    #+#             */
-/*   Updated: 2023/05/02 13:02:53 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/05/02 13:23:50 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	ft_size_tab(const char *str, char charset)
 	int	count_words;
 
 	count_words = 0;
-	if (str[0] != charset)
+	if (str[0] && str[0] != charset)
 		count_words++;
 	i = 1;
 	while (str[i])
