@@ -6,11 +6,11 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 21:15:10 by alelomba          #+#    #+#             */
-/*   Updated: 2023/03/17 22:42:29 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/05/02 10:50:37 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

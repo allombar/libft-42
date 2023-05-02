@@ -6,11 +6,11 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:28:55 by alelomba          #+#    #+#             */
-/*   Updated: 2023/04/09 13:03:13 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/05/02 10:50:37 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static char	*ft_strndup(const char *src, int size)
 {
@@ -92,8 +92,10 @@ char	**ft_split(char const *str, char c)
 {
 	char	**tab;
 
+	if (!str)
+		return (NULL);
 	tab = (char **)malloc(sizeof(char *) * (ft_size_tab(str, c) + 1));
-	if (!str || !tab)
+	if (!tab)
 		return (NULL);
 	tab[ft_size_tab(str, c)] = 0;
 	if (ft_write(tab, str, c) == 0)

@@ -6,11 +6,11 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 18:00:19 by alelomba          #+#    #+#             */
-/*   Updated: 2023/04/08 14:27:43 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/05/02 10:50:37 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

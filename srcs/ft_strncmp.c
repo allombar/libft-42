@@ -6,11 +6,11 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:59:11 by alelomba          #+#    #+#             */
-/*   Updated: 2023/03/29 12:54:33 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/05/02 10:50:37 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

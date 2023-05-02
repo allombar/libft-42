@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -19,7 +19,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	tmp_s1 = (unsigned char *)s1;
 	tmp_s2 = (unsigned char *)s2;
-	while (n != 0)
+	while (n)
 	{
 		if (*tmp_s1 != *tmp_s2)
 			return (*tmp_s1 - *tmp_s2);

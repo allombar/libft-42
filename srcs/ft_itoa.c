@@ -6,11 +6,11 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:26:47 by alelomba          #+#    #+#             */
-/*   Updated: 2023/04/09 13:04:37 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/05/02 10:50:37 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	ft_calc_size_str(long n)
 {
