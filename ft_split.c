@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:28:55 by alelomba          #+#    #+#             */
-/*   Updated: 2023/05/02 13:23:50 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/06/06 10:46:07 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ static int	ft_size_tab(const char *str, char charset)
 	int	count_words;
 
 	count_words = 0;
+	if (str[0] == '\0')
+		return (0);
 	if (str[0] && str[0] != charset)
 		count_words++;
 	i = 1;
@@ -52,12 +54,15 @@ static int	ft_size_tab(const char *str, char charset)
 
 static int	ft_free(char **tab, int index)
 {
-	while (index)
+	int	i;
+
+	i = 0;
+	while (i < index)
 	{
-		free(tab[index]);
-		index--;
+		free(tab[i]);
+		i++;
 	}
-	free(tab[index]);
+	free(tab);
 	return (0);
 }
 
@@ -80,7 +85,7 @@ static int	ft_write(char **split, const char *str, char charset)
 				j++;
 			split[words] = ft_strndup(&str[i], j);
 			if (!split[words])
-				return (ft_free(split, words - 1));
+				return (ft_free(split, words));
 			i = i + j;
 			words++;
 		}
@@ -97,8 +102,8 @@ char	**ft_split(char const *str, char c)
 	tab = (char **)malloc(sizeof(char *) * (ft_size_tab(str, c) + 1));
 	if (!tab)
 		return (NULL);
-	tab[ft_size_tab(str, c)] = 0;
 	if (ft_write(tab, str, c) == 0)
 		return (NULL);
+	tab[ft_size_tab(str, c)] = 0;
 	return (tab);
 }
