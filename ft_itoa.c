@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:26:47 by alelomba          #+#    #+#             */
-/*   Updated: 2023/05/02 13:02:53 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/06/06 17:50:09 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_calc_size_str(long n)
 	return (size + 1);
 }
 
-void	ft_to_positive(char *str, int *i, long *nb)
+static void	ft_to_positive(char *str, int *i, long *nb)
 {
 	if (*nb < 0)
 	{
