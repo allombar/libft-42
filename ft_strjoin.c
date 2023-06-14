@@ -6,7 +6,7 @@
 /*   By: alelomba <alelomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 09:45:21 by alelomba          #+#    #+#             */
-/*   Updated: 2023/05/02 13:02:53 by alelomba         ###   ########.fr       */
+/*   Updated: 2023/06/12 18:47:47 by alelomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ char	*ft_strjoin(char const *s1, const char *s2)
 {
 	char	*result;
 
+	if (!s1 || !s2)
+		return (NULL);
 	result = ft_strnew((ft_slen(s1) + ft_slen(s2)));
 	if (!result)
 		return (NULL);
-	if (s1)
-		ft_strcat(result, s1);
-	if (s2)
-		ft_strcat(result, s2);
+	ft_strcat(result, s1);
+	ft_strcat(result, s2);
 	return (result);
 }
